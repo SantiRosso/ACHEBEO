@@ -7,7 +7,7 @@ const getSeries = async () => {
     const result = await axios.get(
       `https://api.themoviedb.org/3/discover/tv?api_key=${API_KEY}`
     );
-    return result.data;
+    return result.data.results;
   } catch (error) {
     throw new Error(error);
   }
