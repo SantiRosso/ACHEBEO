@@ -26,4 +26,17 @@ const getMovieById = async (id) => {
   }
 };
 
-module.exports = { getMovies, getMovieById };
+const getMovieByName = async (name) => {
+  try {
+    const result = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${API_KEY}`)
+    return result.data;
+  } catch (error) {
+    throw new Error(error);
+  }
+}
+
+module.exports = {
+  getMovies,
+  getMovieById,
+  getMovieByName
+};
