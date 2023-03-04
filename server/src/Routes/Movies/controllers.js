@@ -7,7 +7,7 @@ const getMovies = async () => {
     const result = await axios.get(
       `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}`
     );
-    return result.data;
+    return result.data.results;
     //enviar a base de datos?
     //elegir los datos que se van a retornar
   } catch (error) {
@@ -28,15 +28,17 @@ const getMovieById = async (id) => {
 
 const getMovieByName = async (name) => {
   try {
-    const result = await axios.get(`https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${API_KEY}`)
+    const result = await axios.get(
+      `https://api.themoviedb.org/3/search/movie?query=${name}&api_key=${API_KEY}`
+    );
     return result.data;
   } catch (error) {
     throw new Error(error);
   }
-}
+};
 
 module.exports = {
   getMovies,
   getMovieById,
-  getMovieByName
+  getMovieByName,
 };
