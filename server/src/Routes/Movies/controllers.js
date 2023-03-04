@@ -35,4 +35,8 @@ const getMovieByName = async (name) => {
   }
 }
 
-module.exports = { getMovies, getMovieById };
+module.exports = {
+  getMovies,
+  getMovieById,
+  getMovieByName
+};
