@@ -13,4 +13,15 @@ const getSeries = async () => {
   }
 };
 
-module.exports = { getSeries };
+const getSerieById = async (id) => {
+  try {
+    const result = await axios.get(
+      `https://api.themoviedb.org/3//tv/${id}?api_key=${API_KEY}`
+    );
+    return result.data;
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
+module.exports = { getSeries, getSerieById };
