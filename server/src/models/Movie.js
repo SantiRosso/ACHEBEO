@@ -1,13 +1,11 @@
-const { DataTypes } = require('sequelize')
+const { DataTypes } = require("sequelize");
 
-module.exports = sequelize => {
-    sequelize.define('movie', {
-        title: {
-            type: DataTypes.STRING,
-            allowNull: false
-        },
-        type: {
-            type: DataTypes.STRING,
-        },
-    })
-}
+module.exports = (sequelize) => {
+  sequelize.define("movie", {
+    id: {
+      type: DataTypes.NUMBER,
+      primaryKey: true,
+      allowNull: false,
+    },
+  });
+};
