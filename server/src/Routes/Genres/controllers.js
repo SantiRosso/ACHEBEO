@@ -9,7 +9,6 @@ const getGenres = async () => {
       `https://api.themoviedb.org/3//genre/movie/list?api_key=${API_KEY}`
     );
     await Genre.bulkCreate(result.data.genres);
-    //agregar géneros a la base de datos
     return result.data.genres;
   } catch (error) {
     throw new Error(error);
