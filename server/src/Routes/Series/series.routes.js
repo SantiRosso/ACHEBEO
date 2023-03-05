@@ -1,9 +1,15 @@
 const { Router } = require("express");
 const router = Router();
-const { getSeries, getSerieById } = require("./controllers.js");
+const {
+  getSeries,
+  getSerieById,
+  getSeriesByName,
+} = require("./controllers.js");
 
 router.get("/", async (req, res) => {
+  const { name } = req.query;
   try {
+    if (name) return res.send(await getSeriesByName(name));
     res.send(await getSeries());
   } catch (error) {
     res.status(500).send(error.message);

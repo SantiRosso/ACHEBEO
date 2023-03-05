@@ -35,4 +35,4 @@ const getSeriesByName = async (name) => {
   }
 };
 
-module.exports = { getSeries, getSerieById };
+module.exports = { getSeries, getSerieById, getSeriesByName };
