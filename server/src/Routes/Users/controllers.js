@@ -1,16 +1,15 @@
 const { User } = require("../../db.js");
 
-const getUser = async (req, res) => {
+const getUsers = async () => {
     try {
         const users = await User.findAll()
-        res.send(users)
+        return users
     } catch (error) {
         throw new Error(error);
     }
 }
 
-const postUser = async (req, res) => {
-    const { name, lastname, email, password } = req.body
+const postUser = async (name, lastname, email, password) => {
     try {
         const userDb = await User.findOne({
             where: {
@@ -21,14 +20,13 @@ const postUser = async (req, res) => {
             throw new Error('This email is already used');
         }
         const user = await User.create({ name, lastname, email, password })
-        res.send(user)
+        return user
     } catch (error) {
-        res.status(400).send(error.message)
+        throw new Error(error);
     }
-
 }
 
 module.exports = {
-    getUser,
+    getUsers,
     postUser
 }
