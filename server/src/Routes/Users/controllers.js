@@ -12,10 +12,18 @@ const getUser = async (req, res) => {
 const postUser = async (req, res) => {
     const { name, lastname, email, password } = req.body
     try {
+        const userDb = await User.findOne({
+            where: {
+                email,
+            }
+        })
+        if (userDb) {
+            throw new Error('This email is already used');
+        }
         const user = await User.create({ name, lastname, email, password })
         res.send(user)
     } catch (error) {
-        throw new Error(error);
+        res.status(400).send(error.message)
     }
 
 }
