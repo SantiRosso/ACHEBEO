@@ -5,6 +5,7 @@ const {
   getUsers,
   getUserById,
   updateUser,
+  deleteUser,
 } = require("./controllers");
 
 const router = Router();
@@ -40,6 +41,16 @@ router.put("/", async (req, res) => {
   const { name, lastname, email, password, id } = req.body;
   try {
     await updateUser(name, lastname, email, password, id);
+    res.sendStatus(204);
+  } catch (error) {
+    res.status(500).send(error.message);
+  }
+});
+
+router.delete("/", async (req, res) => {
+  const { id } = req.body;
+  try {
+    await deleteUser(id);
     res.sendStatus(204);
   } catch (error) {
     res.status(500).send(error.message);

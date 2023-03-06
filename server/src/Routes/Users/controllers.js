@@ -53,9 +53,22 @@ const updateUser = async (name, lastname, email, password, id) => {
   }
 };
 
+const deleteUser = async (id) => {
+  try {
+    await User.destroy({
+      where: {
+        id,
+      },
+    });
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
 module.exports = {
   getUsers,
   postUser,
   getUserById,
   updateUser,
+  deleteUser,
 };
