@@ -1,6 +1,11 @@
 const { Router } = require("express");
 const User = require("../../models/User");
-const { postUser, getUsers, getUserById } = require("./controllers");
+const {
+  postUser,
+  getUsers,
+  getUserById,
+  updateUser,
+} = require("./controllers");
 
 const router = Router();
 
@@ -28,6 +33,16 @@ router.post("/", async (req, res) => {
     res.sendStatus(204);
   } catch (error) {
     res.status(400).send(error.message);
+  }
+});
+
+router.put("/", async (req, res) => {
+  const { name, lastname, email, password } = req.body;
+  try {
+    await updateUser(name, lastname, email, password);
+    res.sendStatus(204);
+  } catch (error) {
+    res.status(500).send(error.message);
   }
 });
 
