@@ -35,8 +35,27 @@ const getUserById = async (id) => {
   }
 };
 
+const updateUser = async (name, lastname, email, password, id) => {
+  try {
+    const userDb = await User.findOne({
+      where: {
+        id,
+      },
+    });
+    console.log(userDb);
+    userDb.name = name;
+    userDb.lastname = lastname;
+    userDb.email = email;
+    userDb.password = password;
+    await userDb.save();
+  } catch (error) {
+    throw new Error(error);
+  }
+};
+
 module.exports = {
   getUsers,
   postUser,
   getUserById,
+  updateUser,
 };
