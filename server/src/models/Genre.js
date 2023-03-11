@@ -1,14 +1,14 @@
 const { DataTypes } = require("sequelize");
 
 module.exports = (sequelize) => {
-  sequelize.define("movie", {
+  sequelize.define("genre", {
     id: {
       type: DataTypes.INTEGER,
       primaryKey: true,
       allowNull: false,
     },
-    userId: {
-      type: DataTypes.INTEGER,
+    name: {
+      type: DataTypes.STRING,
       allowNull: false,
     },
   });
