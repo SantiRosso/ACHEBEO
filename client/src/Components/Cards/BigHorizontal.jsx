@@ -1,9 +1,11 @@
+import React from 'react';
+
 const BigHorizontal = () => {
-    return(
+    return (
         <div>
-            BigHorizontal
+
         </div>
-    )
-}
+    );
+};
 
 export default BigHorizontal;

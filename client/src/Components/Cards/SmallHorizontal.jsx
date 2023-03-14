@@ -1,9 +1,11 @@
+import React from 'react';
+
 const SmallHorizontal = () => {
-    return(
+    return (
         <div>
-            SmallHorizontal
+
         </div>
-    )
-}
+    );
+};
 
 export default SmallHorizontal;

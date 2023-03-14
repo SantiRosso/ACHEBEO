@@ -1,9 +1,11 @@
+import React from 'react';
+
 const SmallVertical = () => {
-    return(
+    return (
         <div>
-            SmallVertical
+
         </div>
-    )
-}
+    );
+};
 
 export default SmallVertical;
