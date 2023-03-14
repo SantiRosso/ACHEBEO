@@ -5,6 +5,7 @@ import LandingPage from './Components/LandingPage'
 import Home from './Components/Home'
 import ProfilesHub from './Components/ProfilesHub'
 import Login from './Components/Login'
+import Search from './Components/Search'
 
 function App() {
 
@@ -12,9 +13,10 @@ function App() {
     <div className="App">
       <Routes>
         <Route exact path='/' element={<LandingPage />} />
-        <Route path='/login' element={<Login />} />
         <Route path='/home' element={<Home />} />
+        <Route path='/login' element={<Login />} />
         <Route path='/profile' element={<ProfilesHub />} />
+        <Route path='/search' element={<Search />} />
       </Routes>
     </div>
   )

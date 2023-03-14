@@ -1,10 +1,10 @@
 import React from 'react';
-import SecundaryButton from './SecundaryButton';
+import SecundaryButton from './Buttons/SecundaryButton';
 
 const LandingPage = () => {
     return (
         <div>
-            <SecundaryButton name={"INICIAR SESIÓN"} route={"/"}/>
+            <SecundaryButton name={"INICIAR SESIÓN"} route={"/"} />
         </div>
     );
 };
