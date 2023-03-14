@@ -5,8 +5,9 @@ import PrimaryButton from './Buttons/PrimaryButton';
 const LandingPage = () => {
     return (
         <div className='bg-black h-screen'>
-            <SecundaryButton name={"INICIAR SESIÓN"} route={"/"} />
-            <PrimaryButton name={"INICIAR SESIÓN"} route={"/"} />
+            <SecundaryButton name={"INICIAR SESIÓN"} />
+            <PrimaryButton name={"INICIAR SESIÓN"} />
+            <PrimaryButton name={"HOME"} route={"/home"} />
         </div>
     );
 };

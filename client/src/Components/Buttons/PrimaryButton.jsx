@@ -1,7 +1,9 @@
 import React from 'react';
+import { useNavigate } from "react-router-dom"
 
 const PrimaryButton = ({ name, onClick, route }) => {
     
+    const navigate = useNavigate()
     const handleClick = () => {
         if(route){
             navigate(route)
