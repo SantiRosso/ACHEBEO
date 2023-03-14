@@ -2,9 +2,9 @@ import { useState } from 'react'
 import './App.css'
 import { Routes, Route } from 'react-router-dom'
 import LandingPage from './Components/LandingPage'
-import Home from './Components/HomeTailwind'
+import Home from './Components/Home'
 import ProfilesHub from './Components/ProfilesHub'
-import Login from './Components/LoginTailwind'
+import Login from './Components/Login'
 
 function App() {
 
