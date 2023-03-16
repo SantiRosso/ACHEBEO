@@ -12,13 +12,17 @@ const NavBar = () => {
                 <p className="text-white cursor-pointer mx-5 font-bold" onClick={()=> navigate("/")}>Peliculas</p>
                 <p className="text-white cursor-pointer mx-5 font-bold" onClick={()=> navigate("/")}>Series</p>
             </div>
-            <p className="text-white cursor-pointer text-xl font-bold">MovieLabs</p>
+            <p className="text-white cursor-pointer text-xl font-bold -translate-x-20">MovieLabs</p>
             <div className="flex justify-between items-center">
                 <BiSearch size='20px' color='white' className="cursor-pointer" mx-5 onClick={()=> navigate("/")} />
                 <p className="text-white cursor-pointer mx-5 font-bold" onClick={()=> navigate("/")}>Perfil</p>
                 {/* Iniciar sesión 
                 Suscríbete */}
             </div>
+            {/* <div>
+                <PrimaryButton/>
+                <SecundaryButton/>
+            </div> */}
         </div>
     )
 }
