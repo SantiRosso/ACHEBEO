@@ -1,3 +1,4 @@
+import React from 'react';
 import { useNavigate } from "react-router-dom";
 import { BiSearch } from 'react-icons/bi'
 import { AiOutlineMenu } from 'react-icons/ai'
@@ -14,7 +15,7 @@ const NavBar = () => {
             </div>
             <p className="text-white cursor-pointer text-xl font-bold -translate-x-20">MovieLabs</p>
             <div className="flex justify-between items-center">
-                <BiSearch size='20px' color='white' className="cursor-pointer" mx-5 onClick={() => navigate("/")} />
+                <BiSearch size='20px' color='white' className="cursor-pointer" mx-5 onClick={() => navigate("/search")} />
                 <p className="text-white cursor-pointer mx-5 font-bold" onClick={() => navigate("/")}>Perfil</p>
                 {/* Iniciar sesión 
                 Suscríbete */}
@@ -25,6 +26,6 @@ const NavBar = () => {
             </div> */}
         </div>
     )
-}
+};
 
 export default NavBar;
