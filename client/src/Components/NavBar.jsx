@@ -16,8 +16,8 @@ const NavBar = () => {
             <div className="flex justify-between items-center">
                 <BiSearch size='20px' color='white' className="cursor-pointer" mx-5 onClick={()=> navigate("/")} />
                 <p className="text-white cursor-pointer mx-5 font-bold" onClick={()=> navigate("/")}>Perfil</p>
-                //Iniciar sesión 
-                //Suscríbete
+                {/* Iniciar sesión 
+                Suscríbete */}
             </div>
         </div>
     )
