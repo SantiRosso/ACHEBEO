@@ -1,9 +1,9 @@
 import React from 'react';
 
-const BigHorizontal = () => {
+const BigHorizontal = ({ img }) => {
     return (
-        <div>
-
+        <div className='cursor-pointer w-106 h-82 p-0.5 hover:outline hover:outline-2 hover:outline-violet-800'>
+            <img className='w-106 h-82' src={img} alt="" />
         </div>
     );
 };

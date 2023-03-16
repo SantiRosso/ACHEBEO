@@ -1,9 +1,9 @@
 import React from 'react';
 
-const SmallVertical = () => {
+const SmallVertical = ({ img }) => {
     return (
-        <div>
-
+        <div className='cursor-pointer h-80 w-60 p-px hover:outline hover:outline-2 hover:outline-violet-800'>
+            <img className='object-cover h-80 w-60 p-px ' src={img} alt="" />
         </div>
     );
 };
